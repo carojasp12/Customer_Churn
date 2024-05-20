@@ -17,7 +17,19 @@ The top three reasons according to our model that will likely cause a customer t
 
 1. Higher call rate to the support department
 2. Customer is paying past the payment due date on a consistent basis
-3. The customer has 
+3. The customer has a high total spend overtime 
+
+The top 3 reasons that do not affect if a customer is going or churn or not churn
+
+1. Gender
+2. The type of subcription (Basic, Standard, Premium)
+3. Usage frequency
+
+Hypothesis - We infer that a customer will not churn 
+
+1. The product is excellent meaning that there will be less support calls
+2. The customer pays on a consistent basis meaning they enjoy and use the product
+3. The customer has a low spend overtime
 
 
 '''
