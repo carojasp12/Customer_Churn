@@ -11,8 +11,15 @@ Churn, also known as customer attrition, refers to the phenomenon where customer
 This is where we tell them why churn is important for them to consider.
 It is a critical metric in industries like telecommunications, subscription-based services, and financial services because retaining existing customers is often more cost-effective than acquiring new ones.
 
-## What can I do to stop churn?
-This is where we tell them how we can help.
+## These are the top 3 reasons why customers churn or not churn?
+
+The top three reasons according to our model that will likely cause a customer to churn are as follows
+
+1. Higher call rate to the support department
+2. Customer is paying past the payment due date on a consistent basis
+3. The customer has 
+
+
 '''
 
 
