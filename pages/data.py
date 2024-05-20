@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 
 
 layout = dbc.Container([
-    hmtl.H1("The Data"),
+    html.H1("The Data"),
     html.H3("Source Information"),
     html.H3("Dataset Features"),
 ])

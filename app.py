@@ -9,8 +9,8 @@ nav = dbc.Nav(
     [
         dbc.NavItem(dbc.NavLink("Home", active="exact", href="/")),
         dbc.NavItem(dbc.NavLink("About", active="exact", href="/about")),
-        dbc.NavItem(bnc.NavLink("The Data", active="exact", href="/data")),
-        dbc.NavItem(dbc.NavLink("The Model", active="exact")),
+        dbc.NavItem(dbc.NavLink("The Data", active="exact", href="/data")),
+        dbc.NavItem(dbc.NavLink("The Model", active="exact", href="/model")),
         dbc.NavItem(dbc.NavLink("Statistics", active="exact")),
     ],
     pills=True
