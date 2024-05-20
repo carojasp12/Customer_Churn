@@ -34,7 +34,7 @@ tab3_content = dbc.Card(
 
 tab4_content = dbc.Card(
     dbc.CardBody([
-        html.P("This is card 4. Don't shoot, please.", className="card=text"),
+        html.P("Pablo Fortich. Graduate from Universitty of Central Florida class of 2024. Soon to attend Georgia Tech to earn my masters in Analytics.", className="card=text"),
         dbc.Button("Click here", color="success"),
     ]),
     className="mt-3",
