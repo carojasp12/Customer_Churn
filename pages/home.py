@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 image_path = 'assets/churn-image.jpg'
 
 home_content = '''
-## What is churn?
+## So what is churn?
 This is where we define/describe churn.
 Churn, also known as customer attrition, refers to the phenomenon where customers stop doing business with a company or cease using its services over a specific period or permanently. 
 ## What does churn mean for my business?
