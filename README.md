@@ -1,6 +1,6 @@
 Why do customer Churn or not Churn? 
 
-To understand the why this happens we mustt first understand the definitions
+To understand the why this happens we must first understand the definitions
 
 Churning
 Churning refers to the phenomenon where customers or employees stop using a product or service, or leave a company. This is often seen as a negative metric, indicating dissatisfaction or better opportunities elsewhere. Churning is particularly significant in subscription-based businesses, where customer retention is crucial for revenue stability.
