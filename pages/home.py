@@ -2,6 +2,7 @@ import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
+image_path = 'assets/churn-image.jpg'
 
 home_content = '''
 ## What is churn?
@@ -34,12 +35,33 @@ Hypothesis - We infer that a customer will not churn
 
 '''
 
-
-
 layout = dbc.Container([
-    html.H1("To Churn or Not to Churn"),
-    html.H3("A Machine Learning Project by: Perfectionists-Under-Pressure+"),html.Br(),
-    dcc.Markdown(home_content),
+    dbc.Row([
+        dbc.Col([
+            html.H1("To Churn or Not to Churn")
+        ])
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.Img(src=image_path)
+        ])
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.H3("A Machine Learning Project by: Perfectionists-Under_pressure+")
+        ])
+    ]),
+    dbc.Row([
+        dbc.Col([
+            dcc.Markdown(home_content)
+        ])
+    ])
 ])
+
+# layout = dbc.Container([
+#     html.H1("To Churn or Not to Churn"),
+#     html.H3("A Machine Learning Project by: Perfectionists-Under-Pressure+"),html.Br(),
+#     dcc.Markdown(home_content),
+# ])
 
 dash.register_page(__name__, path="/")
