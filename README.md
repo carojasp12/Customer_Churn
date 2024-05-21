@@ -1,4 +1,4 @@
-## Why do customer Churn or not Churn? ##
+# Why do customer Churn or not Churn? #
 
 # To understand the why this happens we must first understand the definitions #
 
