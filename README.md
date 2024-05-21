@@ -20,7 +20,7 @@ The top 3 reasons that do not affect if a customer is going or churn or not chur
 2. The type of subcription (Basic, Standard, Premium)
 3. Usage frequency
 
-Hypothesis - We infer that a customer will not churn 
+Hypothesis - We infer that a customer will not churn if
 
 1. The product is excellent meaning that there will be less support calls
 2. The customer pays on a consistent basis meaning they enjoy and use the product
