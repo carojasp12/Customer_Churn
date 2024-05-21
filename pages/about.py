@@ -34,7 +34,7 @@ tab3_content = dbc.Card(
 
 tab4_content = dbc.Card(
     dbc.CardBody([
-        html.P("Hello! I'm Pablo Fortich, a recent graduate with a Master’s degree in Political Science, specializing in Intelligence and National Security, from the University of Central Florida. I am also currently enrolled in the Master's in Analytics program at Georgia Tech, where I am further honing my skills in data analytics to support my aspiration of working in a data-driven role within the federal government.
+        html.P("Hello! I'm Pablo Fortich, a recent graduate with a Master’s degree in Political Science, specializing in Intelligence and National Security, from the University of Central Florida. I am also currently enrolled in the Master's in Analytics program at Georgia Tech, where I am further honing my skills in data analytics to support my aspiration of working in a data-driven role within the federal government."
 
 ", className="card=text"),
         dbc.Button("Click here", color="success"),
