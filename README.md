@@ -30,6 +30,6 @@ Look at our HTML to see if our Hypothesis was correct.
 
 In order to find if out if our hypothesis was correct we developed a Machine Learning model in order to predict if a customer was going to churn or not churn based on circumstances. Our model was 93% accurate overall. 
 
-Refer to the files for a deeper look. 
+Refer to the file titled algorithm.
 
 
