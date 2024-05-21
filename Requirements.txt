@@ -1,0 +1,13 @@
+# Python Packages Used In Customer_Churn
+python==3.10.13
+pandas==2.0.3
+numpy==1.24.3
+dash==2.14.2
+seaborn==0.12.2
+matplotlib==3.7.2
+plotly==5.9.0
+dash_bootstrap_components==1.5.0
+dash_bootstrap_templates==1.1.2
+dash_leaflet==1.0.15
+scikit-learn==1.3.0
+xgboost==2.0.3
