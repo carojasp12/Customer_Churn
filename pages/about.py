@@ -16,7 +16,7 @@ tab1_content = dbc.Card(
 tab2_content = dbc.Card(
     dbc.CardBody(
         [
-            html.P("This is tab 2!", className="card-text"),
+            html.P("Hello! My name is Harsh. I am passionate to embark on a career in data science with a background in project management. My commitment to detail-oriented analysis and a recent professional certificate in data science, including proficiency in Python and machine learning, underscores my readiness to contribute effectively to data projects.", className="card-text"),
             dbc.Button("Find Harsh on Github", color="secondary", href="https://github.com/10H-K"),
         ]
     ),
