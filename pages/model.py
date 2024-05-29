@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 from data_processing import math
 
-# Define the layout of the app
+# Define the variable inputs for the model
 age = dcc.Input(id='input_box1', type='number')
 gender = dcc.RadioItems(["Female", "Male"], inline=True, id="memory-gender")
 tenure = dcc.Input(id='input_box2', type='number')
@@ -17,38 +17,61 @@ usage = dcc.Input(id='input_box5', type='number')
 last_interaction = dcc.Input(id='input_box6', type='number')
 support = dcc.Input(id='input_box7', type='number')
 
+# describe the model
+about_random_forest = """
+Random Forest is an ensemble learning method used for classification and regression tasks. 
+It operates by constructing a multitude of decision trees during training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
+Key aspects of the Random Forest model that suited our objective include: """
+random_aspect1 = "1. effective management of datasets with a large number of features by selecting subsets for each split, reducing the risk of overfitting"
+random_aspect2 = "2. ability to combine the outputs of multiple decision trees, which reduces model variance and prevents overfitting"
+random_aspect3 = "3. capability of capturing complex, non-linear relationships between features and the target variable"
+random_aspect4 = "4. robustness to noisy data and outliers, as the ensemble approach averages out their effects, leading to more stable and reliable predictions"
 
+single_user_input = """
+Input single-user data in the fields below for a case-by-case analysis, or upload a CSV or Excel file with the information formatted as described 
+below for multi-user analysis. 
+            """
+
+# define the layout
 layout = dbc.Container([
     dbc.Row([
         dbc.Col([
-            html.H2("The Model", className="align-center")
+            html.H2("The Model")
         ])
     ]),
     dbc.Row([
         dbc.Col([
-            html.H4("Random Forest ")
+            html.H3("Random Forest")
         ]),
-        dbc.Col([])
-    ]),
-    
-    dbc.Row([
-        dbc.Col([
-            dcc.Markdown("""
-                Input single-user data in the fields below for a case-by-case analysis, 
-                or upload a CSV or Excel file with the information formatted as described 
-                below for multi-user analysis. 
-            """)
-        ])
     ]),
     dbc.Row([
         dbc.Col([
-            html.H6("Age:")
+            html.P(about_random_forest),
+            html.Ol(random_aspect1),
+            html.Ol(random_aspect2),
+            html.Ol(random_aspect3),
+            html.Ol(random_aspect4)
+        ], className="fs-5")
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.H2("Try It!")
+        ], className="mt-4")
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.P(single_user_input)
+        ], className="fs-5 mb-2")
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.H5("Age:")
         ]),
         dbc.Col([
             age
         ]),
         dbc.Col([
-            html.H6("Gender:")
+            html.H5("Gender:")
         ]),
         dbc.Col([
             gender
@@ -56,13 +79,13 @@ layout = dbc.Container([
      ]),
     dbc.Row([
         dbc.Col([
-            html.H6("Tenure:")
+            html.H5("Tenure:")
         ]),
         dbc.Col([
             tenure
         ]),
         dbc.Col([
-            html.H6("Subscription Type:")
+            html.H5("Subscription Type:")
         ]),
         dbc.Col([
             subscription
@@ -70,13 +93,13 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H6("Contract Type:")
+            html.H5("Contract Type:")
         ]),
         dbc.Col([
             contract
         ]),
         dbc.Col([
-            html.H6("Total Spent:")
+            html.H5("Total Spent:")
         ]),
         dbc.Col([
             spent
@@ -84,13 +107,13 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H6("Payment Delayed (days):")
+            html.H5("Payment Delayed (days):")
         ]),
         dbc.Col([
             delayed_payment
         ]),
         dbc.Col([
-            html.H6("Usage Frequency:")
+            html.H5("Usage Frequency:")
         ]),
         dbc.Col([
             usage
@@ -98,13 +121,13 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H6("Last Interation:")
+            html.H5("Last Interaction:")
         ]),
         dbc.Col([
             last_interaction
         ]),
         dbc.Col([
-            html.H6("Number of Supoort Calls:")
+            html.H5("Number of Supoort Calls:")
         ]),
         dbc.Col([
             support

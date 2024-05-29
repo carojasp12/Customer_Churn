@@ -27,15 +27,14 @@ Churn rate is a critical metric, especially within the telecommunication and fin
 churn_business_body3 = """
 The purpose of this project isn't to identify how quickly you'ore losing customers, though.
 It's to help you identify who you're losing so you can employ better-targeted marketing campaigns aimed at retaining your customer base.
-Or identify prblems within your business that are pushing your customers to leave.
+Or identify problems within your business that are pushing your customers to leave.
 """
 
 help_header = "How can you help me determine which customers are leaving?"
 
 help_body = """
 Through machine learning and data analysis. 
-You can learn more, and even take advantage of our model, by checking out our Data, Model, and Dashboard pages, visible from the top of every page.
-Or you can follow the links!
+You can learn more, and even take advantage of our model, by checking out our other pages.
 """
 
 help_body2 = "To learn more about the members of Perfectionists-Under-Pressure+, check out our About page."
@@ -68,7 +67,7 @@ more_body10 = "2. Type of subscription (Basic, Standard, Premium)"
 
 more_body11 = "1. Gender"
 
-more_body12 = "But does 'less important' mean 'not important at all1?"
+more_body12 = "But does 'less important' mean 'not important at all?"
 
 more_body13 = "Upload some customer data to our model and let it tell you, or decide for yourself."
 

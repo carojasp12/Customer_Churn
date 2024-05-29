@@ -27,12 +27,16 @@ He brings a background in political science, with specialties in Intelligence an
 He aspires to combine his passions in a data-driven role within the federal government.
 """
 
+about_pup = """
+Perfectionists-Under-Pressure+ aims to create meaningful, dynamic, user-friendly data analytic content to help make sense of the world around us, one digit at a time."
+"""
+
 tab1_content = dbc.Card(
     dbc.CardBody(
         [
             html.P(about_cesar, className="card-text"),
-            dbc.Button("Find Cesar on Github", color="secondary", href="https://github.com/carojasp12"),
-            dbc.Button("Find Cesar on LinkedIn", color="success"),
+            dbc.Button("Find Cesar on Github", href="https://github.com/carojasp12"),
+            dbc.Button("Find Cesar on LinkedIn", color="secondary"),
         ]
     ),
     className="mt-3 fs-5 px-0",
@@ -42,8 +46,8 @@ tab2_content = dbc.Card(
     dbc.CardBody(
         [
             html.P(about_harsh, className="card-text"),
-            dbc.Button("Find Harsh on Github", color="secondary", href="https://github.com/10H-K"),
-            dbc.Button("Find Harsh on LinkedIn", color="success"),
+            dbc.Button("Find Harsh on Github", href="https://github.com/10H-K"),
+            dbc.Button("Find Harsh on LinkedIn", color="secondary"),
         ]
     ),
     className="mt-3 fs-5 px-0",
@@ -52,8 +56,8 @@ tab2_content = dbc.Card(
 tab3_content = dbc.Card(
     dbc.CardBody([
         html.P(about_meagan, className="card=text"),
-        dbc.Button("Find Meagan on Github", color="secondary", href="https://github.com/m-coldewe"),
-        dbc.Button("Find Meagan on LinkedIn", color="success"),
+        dbc.Button("Find Meagan on Github", href="https://github.com/m-coldewe"),
+        dbc.Button("Find Meagan on LinkedIn", color="secondary"),
     ]),
     className="mt-3 fs-5 px-0",
 )
@@ -61,8 +65,8 @@ tab3_content = dbc.Card(
 tab4_content = dbc.Card(
     dbc.CardBody([
         html.P(about_pablo, className="card=text"),
-        dbc.Button("Find Pablo on Github", color="secondary", href="https://github.com/fortichpablo"),
-        dbc.Button("Find Pablo on LinkedIn", color="success"),
+        dbc.Button("Find Pablo on Github", href="https://github.com/fortichpablo"),
+        dbc.Button("Find Pablo on LinkedIn", color="secondary", href="https://www.linkedin.com/in/pablo-fortich/")
     ]),
     className="mt-3 fs-5 px-0",
 )
@@ -80,6 +84,14 @@ tabs = dbc.Tabs(
 layout = dbc.Container([
     html.Br(), html.H1("About Perfectionists-Under-Pressure+"),
     tabs,
+    dbc.Row([
+        dbc.Col([])
+    ]),
+    dbc.Row([
+        dbc.Col([
+            about_pup
+        ], className="fs-5 mt-3")
+    ])
 ])
 
 dash.register_page(__name__)
