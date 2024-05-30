@@ -25,8 +25,8 @@ Churn rate is a critical metric, especially within the telecommunication and fin
 """
 
 churn_business_body3 = """
-The purpose of this project isn't to identify how quickly you'ore losing customers, though.
-It's to help you identify who you're losing so you can employ better-targeted marketing campaigns aimed at retaining your customer base.
+The purpose of this project isn't to identify how quickly you're losing customers, though.
+It's to help you identify who you're losing so you can employ better-targeted marketing campaigns aimed at customer retention.
 Or identify problems within your business that are pushing your customers to leave.
 """
 
@@ -34,7 +34,7 @@ help_header = "How can you help me determine which customers are leaving?"
 
 help_body = """
 Through machine learning and data analysis. 
-You can learn more, and even take advantage of our model, by checking out our other pages.
+You can learn more about how we can help, and even take advantage of our model, by checking out our other pages.
 """
 
 help_body2 = "To learn more about the members of Perfectionists-Under-Pressure+, check out our About page."
@@ -53,7 +53,7 @@ more_body5 = "3. Total spend"
 
 more_body6 = """
 Very likely, without any additional information, those details are painting a picture for you.
-Perhaps you, like me, imagine that a high number of support calls, and excessive or consistent tardiness marking payments, makes a customer likely to churn.
+Perhaps you, like me, imagine that a high number of support calls, and excessive or consistent tardiness making payments, makes a customer likely to churn.
 Maybe we imagine that a customer who has invested a lot of money in the company is more likely to stay.
 """
 
@@ -67,9 +67,14 @@ more_body10 = "2. Type of subscription (Basic, Standard, Premium)"
 
 more_body11 = "1. Gender"
 
-more_body12 = "But does 'less important' mean 'not important at all?"
+more_body12 = "But does 'less important' mean 'not important at all'?"
 
 more_body13 = "Upload some customer data to our model and let it tell you, or decide for yourself."
+
+image_atrribution = """The above image rightfully belongs to Burlington Press. It is being used here for educational purposes.
+"""
+
+attribution_link = dcc.Link("Image Source", href="https://burlingtonpress.com/2023/12/11/understanding-customer-churn-why-do-customers-switch-to-competing-service-providers/")
 
 
 layout = dbc.Container([
@@ -85,7 +90,7 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H1("A Machine Learning Project by: Perfectionists-Under-pressure+")
+            html.H1("A Machine Learning Project by: Perfectionists-Under-Pressure+")
         ])
     ]),
     dbc.Row([
@@ -151,6 +156,12 @@ layout = dbc.Container([
             html.Br(),
             html.P(more_body13)
         ], className="fs-5")
+    ]),
+    dbc.Row([
+        dbc.Col([
+            html.P(image_atrribution),
+            attribution_link
+        ], className="mt-2")
     ])
 ])
 

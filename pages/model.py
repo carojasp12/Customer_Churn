@@ -41,7 +41,7 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H3("Random Forest")
+            html.H2("Random Forest")
         ]),
     ]),
     dbc.Row([

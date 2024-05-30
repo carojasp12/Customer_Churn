@@ -18,7 +18,7 @@ He aspires to bring new technologies to fields that have largely been analog.
 about_meagan = """
 Meagan combines her skills in HTML, Plotly Dash, Python, and data visualization with a steadfast persistence and eagerness to learn. 
 With a background in English, she brings a unique perspective to data analysis, excelling in project management and effective communication. 
-Megan is driven to transition into the data analysis field, where she aims to leverage her strong analytical capabilities and creative problem-solving skills to deliver insightful and impactful results. 
+Meagan is driven to transition into the data analysis field, where she aims to leverage her strong analytical capabilities and creative problem-solving skills to deliver insightful and impactful results. 
 """
 
 about_pablo = """
@@ -30,6 +30,8 @@ He aspires to combine his passions in a data-driven role within the federal gove
 about_pup = """
 Perfectionists-Under-Pressure+ aims to create meaningful, dynamic, user-friendly data analytic content to help make sense of the world around us, one digit at a time."
 """
+
+pup_pic = "assets/vecteezy-dog-outline.jpg"
 
 tab1_content = dbc.Card(
     dbc.CardBody(
@@ -91,7 +93,7 @@ layout = dbc.Container([
         dbc.Col([
             about_pup
         ], className="fs-5 mt-3")
-    ])
+    ]),
 ])
 
 dash.register_page(__name__)
