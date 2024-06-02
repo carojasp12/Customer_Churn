@@ -47,6 +47,7 @@ On this page, we present an interactive dashboard designed to assist business ow
 
 ![Screenshot 2024-06-02 at 6 28 58 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/17ff8d60-5818-45aa-8952-135f5f9f8d4f)
 lts
+![Screenshot 2024-06-02 at 6 33 51 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/a1cfa409-a502-448d-8869-e65a38597e6a)
 
 # The top three reasons according to our model that will likely cause a customer to churn are as follows # 
 
