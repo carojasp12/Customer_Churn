@@ -61,20 +61,21 @@ lts
 3. Usage frequency
 
 # Summary
+Importance of Our ML Model in Helping Business Owners Retain Clients
 
+Our machine learning model plays a crucial role in helping business owners retain clients by:
 
-# Extra information
+Predictive Insights: The model analyzes various customer-related factors to predict which clients are at risk of churning. This allows businesses to identify and address potential issues before customers decide to leave.
 
-# Hypothesis - We infer that a customer will not churn if
+Targeted Marketing: By understanding the likelihood of churn, businesses can create targeted marketing campaigns aimed at retaining high-risk customers, offering personalized incentives and solutions to keep them engaged.
 
-1. The product is excellent meaning that there will be less support calls
-2. The customer pays on a consistent basis meaning they enjoy and use the product
-3. The customer has a low spend overtime
+Resource Optimization: With accurate churn predictions, businesses can allocate their resources more efficiently, focusing their efforts on the customers who need the most attention and support.
 
-Look at our HTML to see if our Hypothesis was correct.
+Data-Driven Decisions: The insights provided by our model enable business owners to make informed decisions based on data, rather than intuition, leading to more effective strategies for customer retention.
 
-In order to find if out if our hypothesis was correct we developed a Machine Learning model in order to predict if a customer was going to churn or not churn based on circumstances. Our model was 93% accurate overall. 
+Identifying Patterns: The model helps in identifying common patterns and trends among customers who churn, providing valuable feedback that can be used to improve products, services, and customer interactions.
 
-Refer to the file titled Algorithms.
+By leveraging our ML model, business owners can proactively manage customer relationships, reduce churn rates, and ultimately enhance their overall profitability and growth.
+
 
 
