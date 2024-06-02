@@ -14,45 +14,34 @@ To understand and predict customer churn, we employ a variety of advanced machin
 
 Under the folder resources, you will find the datasets we used and the database file (db file), providing all the necessary data for this project.
 
-# Requirements
-
-Data Model Implementation (25 points)
-A Python script initializes, trains, and evaluates a model (10 points)
-
-The data is cleaned, normalized, and standardized prior to modeling (5 points)
-
-The model utilizes data retrieved from SQL or Spark (5 points)
-
-The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)
-
-Data Model Optimization (25 points)
-The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)
-
-Overall model performance is printed or displayed at the end of the script (10 points)
-
-GitHub Documentation (25 points)
-GitHub repository is free of unnecessary files and folders and has an appropriate .gitignore in use (10 points)
-
-The README is customized as a polished presentation of the content of the project (15 points)
-
-Group Presentation (25 points)
-All group members speak during the presentation. (5 points)
-
-Content, transitions, and conclusions flow smoothly within any time restrictions. (5 points)
-
-The content is relevant to the project. (10 points)
-
-The presentation maintains audience interest. (5 points)
-
-
-# Process
+# Pages
 
 Home
 
+Welcome to our homepage! Here, we delve into the concept of churn and its implications for businesses. Utilizing Dash, a Python web framework for building analytical web applications, and Bootstrap, a popular CSS framework for responsive design, we've crafted an informative and visually engaging interface.
+
 About
+Get to know the talented individuals driving this project forward.
 
-Etc Below
+Data
 
+Our model uses the Customer Churn Dataset found on Kaggle, modified from two datasets (one testing, one training) to create a single dataset. Refer to the resources folder. 
+
+The dataset we used for our modal contains the follow features!
+
+Age: the numeric age of the customer
+Gender: whether the customer is male or female
+Tenure: the length of time, in months, the customer has used the company's services
+Subscription Type: the type of subscription (Basic, Standard, or Premium) the customer chose
+Contract Type: the type of contract (Monthly, Quarterly, or Annual) the customer chose
+Total Spent: the total amount of money the customer has invested in the company's products or services
+Delayed Payment: how long, in days, the customer went past due on their payment in the last month
+Usage Frequency: the number of times the customer has use the company's servies in the last month
+Last Interaction: the number of days since the customer last had contact with any aspect of the company
+
+Dashboard
+
+On this page, we present an interactive dashboard designed to assist business owners in utilizing our machine learning model to predict whether a customer is likely to churn or remain loyal. This tool provides valuable insights by visualizing customer data through various interactive charts and graphs. By leveraging these predictive analytics, businesses can make informed decisions to improve customer retention strategies and address potential issues proactively.
 
 # Results
 
@@ -69,9 +58,6 @@ Etc Below
 3. Usage frequency
 
 # Summary
-
-
-
 
 
 # Extra information
