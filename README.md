@@ -16,14 +16,14 @@ Under the folder resources, you will find the datasets we used and the database 
 
 # Pages
 
-Home
+# Home
 
 Welcome to our homepage! Here, we delve into the concept of churn and its implications for businesses. Utilizing Dash, a Python web framework for building analytical web applications, and Bootstrap, a popular CSS framework for responsive design, we've crafted an informative and visually engaging interface.
 
-About
+# About
 Get to know the talented individuals driving this project forward.
 
-Data
+# Data
 
 Our model uses the Customer Churn Dataset found on Kaggle, modified from two datasets (one testing, one training) to create a single dataset. Refer to the resources folder. 
 
@@ -39,11 +39,14 @@ Delayed Payment: how long, in days, the customer went past due on their payment 
 Usage Frequency: the number of times the customer has use the company's servies in the last month
 Last Interaction: the number of days since the customer last had contact with any aspect of the company
 
-Dashboard
+# Dashboard
 
 On this page, we present an interactive dashboard designed to assist business owners in utilizing our machine learning model to predict whether a customer is likely to churn or remain loyal. This tool provides valuable insights by visualizing customer data through various interactive charts and graphs. By leveraging these predictive analytics, businesses can make informed decisions to improve customer retention strategies and address potential issues proactively.
 
 # Results
+
+![Screenshot 2024-06-02 at 6 28 58 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/17ff8d60-5818-45aa-8952-135f5f9f8d4f)
+lts
 
 # The top three reasons according to our model that will likely cause a customer to churn are as follows # 
 
