@@ -1,5 +1,20 @@
-# Why do customer Churn or not Churn? #
+# Why do customer Churn or not Churn? 
 
+# Introduction 
+In today's competitive business environment, understanding why customers churn is essential for maintaining a loyal customer base. Leveraging advanced machine learning tools, we have identified the top three main reasons behind customer churn, as well as the three least significant factors. By using these sophisticated analytical tools, businesses can predict customer behavior more accurately, allowing for the development of targeted strategies to enhance customer retention and reduce churn.
+
+# Tools 
+To understand and predict customer churn, we employ a variety of advanced machine learning tools. Our application utilizes Pandas for data manipulation and analysis, SQLite3 to manage and query our database, and NumPy for numerical operations. We leverage Scikit-learn for essential functions such as data preprocessing with StandardScaler, data splitting with train_test_split, and modeling with SVC and RandomForestClassifier. Additionally, we incorporate XGBoost to implement gradient boosting algorithms for enhanced predictive accuracy. To evaluate our models, we use a range of metrics including confusion_matrix, accuracy_score, classification_report, and f1_score. By integrating these powerful tools, we can deliver precise insights into customer behavior, aiding businesses in developing effective retention strategies.
+
+Under the folder resources, you will find the datasets we used and the database file (db file), providing all the necessary data for this project.
+
+# Requirements
+
+# Process
+
+# Results
+
+# Summary
 # To understand the why this happens we must first understand the definitions #
 
 # Churning
