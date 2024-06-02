@@ -1,5 +1,7 @@
 # Why do customer Churn or not Churn? 
 
+<img width="718" alt="Screenshot 2024-06-02 at 6 41 53 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/a8a80760-d6d5-4f18-93b1-96563c7d23be">
+
 # Introduction 
 In today's competitive business environment, understanding why customers churn is essential for maintaining a loyal customer base. Leveraging advanced machine learning tools, we have identified the top three main reasons behind customer churn, as well as the three least significant factors. By using these sophisticated analytical tools, businesses can predict customer behavior more accurately, allowing for the development of targeted strategies to enhance customer retention and reduce churn.
 
@@ -49,7 +51,7 @@ On this page, we present an interactive dashboard designed to assist business ow
 lts
 ![Screenshot 2024-06-02 at 6 33 51 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/a1cfa409-a502-448d-8869-e65a38597e6a)
 
-# The top three reasons according to our model that will likely cause a customer to churn are as follows # 
+# The top 3 reasons according to our model that will likely cause a customer to churn are as follows # 
 
 1. Higher call rate to the support department
 2. Customer is paying past the payment due date on a consistent basis
@@ -60,6 +62,8 @@ lts
 1. Gender
 2. The type of subcription (Basic, Standard, Premium)
 3. Usage frequency
+
+While having one of the top three reasons for churning does not necessarily mean that a customer will leave, the probability increases significantly if a customer exhibits all three reasons. Our machine learning model, with its impressive accuracy rate of 93%, can help identify these at-risk customers. By leveraging this model, business owners can proactively address potential issues, implement targeted retention strategies, and ultimately reduce customer churn. This high level of predictive accuracy allows for more informed decision-making, helping businesses maintain a stable and loyal customer base.
 
 # Summary
 Importance of Our ML Model in Helping Business Owners Retain Clients
