@@ -69,7 +69,8 @@ lts
 
 While having one of the top three reasons for churning does not necessarily mean that a customer will leave, the probability increases significantly if a customer exhibits all three reasons. Our machine learning model, with its impressive accuracy rate of 93%, can help identify these at-risk customers. By leveraging this model, business owners can proactively address potential issues, implement targeted retention strategies, and ultimately reduce customer churn. This high level of predictive accuracy allows for more informed decision-making, helping businesses maintain a stable and loyal customer base.
 
-![Uploading Screenshot 2024-06-02 at 6.54.19 PM.png…]()
+<img width="472" alt="Screenshot 2024-06-02 at 6 54 19 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/03ece066-465a-47bd-b72c-1137da064d9d">
+
 
 Importance of Our ML Model in Helping Business Owners Retain Clients
 
