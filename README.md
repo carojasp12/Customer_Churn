@@ -18,6 +18,9 @@ Under the folder resources, you will find the datasets we used and the database 
 
 # Pages
 
+<img width="397" alt="Screenshot 2024-06-02 at 6 50 54 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/86220a68-e959-4b97-8f05-924a86ed983e">
+
+
 # Home
 
 Welcome to our homepage! Here, we delve into the concept of churn and its implications for businesses. Utilizing Dash, a Python web framework for building analytical web applications, and Bootstrap, a popular CSS framework for responsive design, we've crafted an informative and visually engaging interface.
