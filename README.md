@@ -44,24 +44,24 @@ The dataset we used for our model contains the follow features:
 * Usage Frequency: the number of times the customer has use the company's servies in the last month
 * Last Interaction: the number of days since the customer last had contact with any aspect of the company
 
-#### Dashboard
+### Dashboard
 <img width="500" alt="Screenshot 2024-06-02 at 6 52 31 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/0d39026c-128e-47fe-aedb-cc64a00ff052">
 
 On this page, we present an interactive dashboard designed to assist business owners in utilizing our machine learning model to predict whether a customer is likely to churn or remain loyal. This tool provides valuable insights by visualizing customer data through various interactive charts and graphs. By leveraging these predictive analytics, businesses can make informed decisions to improve customer retention strategies and address potential issues proactively.
 
 ## Results
 
-#### Complete Dataset Correlation Matrix
+### Complete Dataset Correlation Matrix
 
 ![complete_dataset_correlation_matrix](https://github.com/carojasp12/Customer_Churn/assets/152045367/aa9a3a04-d0e0-45e2-be72-fcaa6c35a171)
 
-#### Algorithm Testing Results
+### Algorithm Testing Results
 
 ![investigation_results](https://github.com/carojasp12/Customer_Churn/assets/152045367/0ddeb6be-b1e9-4a11-b0c0-0fa4cd7ca8ae)
 
 The above chart represents the highest accuracy scores achieved by each model following tuning. As you can see, the Random Forest Classifier achieved the highest accuracy.
 
-#### Random Forest Feature Importances
+### Random Forest Feature Importances
 ![Screenshot 2024-06-02 at 6 28 58 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/17ff8d60-5818-45aa-8952-135f5f9f8d4f)
 
 The above Feature Importance chart identifies Support Calls, Total Spend, and Payment Delay as the features that contribute most to determining whether a customer will churn. Our machine learning model, with its impressive accuracy rate of 93%, can use data including these features to help identify at-risk customers. By leveraging this model, business owners can proactively address potential issues, implement targeted retention strategies, and ultimately reduce customer churn. This high level of predictive accuracy allows for more informed decision-making, helping businesses maintain a stable and loyal customer base.
