@@ -26,14 +26,14 @@ about_random_forest = """
 Random Forest is an ensemble learning method used for classification and regression tasks. 
 It operates by constructing a multitude of decision trees during training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
 Key aspects of the Random Forest model that suited our objective include: """
-random_aspect1 = "1. effective management of datasets with a large number of features by selecting subsets for each split, reducing the risk of overfitting"
-random_aspect2 = "2. ability to combine the outputs of multiple decision trees, which reduces model variance and prevents overfitting"
-random_aspect3 = "3. capability of capturing complex, non-linear relationships between features and the target variable"
-random_aspect4 = "4. robustness to noisy data and outliers, as the ensemble approach averages out their effects, leading to more stable and reliable predictions"
+random_aspect1 = "1. Effective management of datasets with a large number of features by selecting subsets for each split, reducing the risk of overfitting"
+random_aspect2 = "2. Ability to combine the outputs of multiple decision trees, which reduces model variance and prevents overfitting"
+random_aspect3 = "3. Capability of capturing complex, non-linear relationships between features and the target variable"
+random_aspect4 = "4. Robustness to noisy data and outliers, as the ensemble approach averages out their effects, leading to more stable and reliable predictions"
 
 single_user_input = """
 Input single-user data in the fields below for a case-by-case analysis, or upload a CSV or Excel file with the information formatted as described 
-below for multi-user analysis. 
+below for multi-user analysis. Results will show 1 if the customer is predicted to churn, and 0 if the customer is predicted to not-churn. 
             """
 
 # Define the layout
@@ -169,7 +169,7 @@ layout = dbc.Container([
         ]),
         style={
             'width': '100%',
-            'height': '60px',
+            'height': '120px',
             'lineHeight': '60px',
             'borderWidth': '1px',
             'borderStyle': 'dashed',
@@ -188,6 +188,11 @@ layout = dbc.Container([
     dcc.Download(id="download-dataframe-csv")
 
             ])
+        ])
+    ]),
+    dbc.Col([
+        dbc.Col([
+            html.Br()
         ])
     ])    
 ])
