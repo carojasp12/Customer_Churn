@@ -2,6 +2,7 @@ import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
+# create variables for textual content for ease of editing and visualization
 image_path = 'assets/churn-image.jpg'
 
 churn_header = "So what is churn?"
@@ -76,7 +77,7 @@ image_atrribution = """The above image rightfully belongs to Burlington Press. I
 
 attribution_link = dcc.Link("Image Source", href="https://burlingtonpress.com/2023/12/11/understanding-customer-churn-why-do-customers-switch-to-competing-service-providers/")
 
-
+# define layout
 layout = dbc.Container([
     dbc.Row([
         dbc.Col([
@@ -159,16 +160,10 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.P(image_atrribution),
-            attribution_link
+            html.P([image_atrribution, attribution_link]),
         ], className="mt-2")
     ])
 ])
 
-# layout = dbc.Container([
-#     html.H1("To Churn or Not to Churn"),
-#     html.H3("A Machine Learning Project by: Perfectionists-Under-Pressure+"),html.Br(),
-#     dcc.Markdown(home_content),
-# ])
-
+# register page to link to app initiation
 dash.register_page(__name__, path="/")

@@ -2,7 +2,7 @@ import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
-
+# create card and other textual content
 about_harsh = """
 Harsh brings a background in project management and microbiology to his work in data analytics. 
 His commitment to exhaustive and detailed analysis ensures a robust data picture. 
@@ -28,17 +28,18 @@ He aspires to combine his passions in a data-driven role within the federal gove
 """
 
 about_pup = """
-Perfectionists-Under-Pressure+ aims to create meaningful, dynamic, user-friendly data analytic content to help make sense of the world around us, one digit at a time."
+Perfectionists-Under-Pressure+ aims to create meaningful, dynamic, user-friendly data analytic content to help make sense of the world around us, one digit at a time.
 """
 
 pup_pic = "assets/vecteezy-dog-outline.jpg"
 
+# define the card layout
 tab1_content = dbc.Card(
     dbc.CardBody(
         [
             html.P(about_cesar, className="card-text"),
             dbc.Button("Find Cesar on Github", href="https://github.com/carojasp12"),
-            dbc.Button("Find Cesar on LinkedIn", color="secondary"),
+            dbc.Button("Find Cesar on LinkedIn", color="secondary", href="https://www.linkedin.com/in/cesar-rojas-6a5919a9/"),
         ]
     ),
     className="mt-3 fs-5 px-0",
@@ -59,7 +60,7 @@ tab3_content = dbc.Card(
     dbc.CardBody([
         html.P(about_meagan, className="card=text"),
         dbc.Button("Find Meagan on Github", href="https://github.com/m-coldewe"),
-        dbc.Button("Find Meagan on LinkedIn", color="secondary"),
+        dbc.Button("Find Meagan on LinkedIn", color="secondary", href="https://www.linkedin.com/in/meagan-coldewe"),
     ]),
     className="mt-3 fs-5 px-0",
 )
@@ -73,6 +74,7 @@ tab4_content = dbc.Card(
     className="mt-3 fs-5 px-0",
 )
 
+# create the tab labels
 tabs = dbc.Tabs(
     [
         dbc.Tab(tab1_content, label="Cesar"),
@@ -82,7 +84,7 @@ tabs = dbc.Tabs(
     ]
 )
 
-
+# define the page layout
 layout = dbc.Container([
     html.Br(), html.H1("About Perfectionists-Under-Pressure+"),
     tabs,
@@ -96,4 +98,5 @@ layout = dbc.Container([
     ]),
 ])
 
+# register the page
 dash.register_page(__name__)

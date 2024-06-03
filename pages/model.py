@@ -79,7 +79,7 @@ layout = dbc.Container([
      ]),
     dbc.Row([
         dbc.Col([
-            html.H5("Tenure:")
+            html.H5("Tenure (months):")
         ]),
         dbc.Col([
             tenure
@@ -113,7 +113,7 @@ layout = dbc.Container([
             delayed_payment
         ]),
         dbc.Col([
-            html.H5("Usage Frequency:")
+            html.H5("Usage Frequency (days):")
         ]),
         dbc.Col([
             usage
@@ -121,13 +121,13 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col([
-            html.H5("Last Interaction:")
+            html.H5("Last Interaction (days):")
         ]),
         dbc.Col([
             last_interaction
         ]),
         dbc.Col([
-            html.H5("Number of Supoort Calls:")
+            html.H5("Number of Support Calls:")
         ]),
         dbc.Col([
             support
@@ -144,7 +144,9 @@ layout = dbc.Container([
         ])
     ]),
     dbc.Row([
-        dbc.Col([])
+        dbc.Col([
+            html.Br()
+        ])
     ]),
     dbc.Row([
         dbc.Col([]),
