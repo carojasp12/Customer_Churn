@@ -1,3 +1,4 @@
+# import necessary libraries
 import pandas as pd
 import numpy as np
 import sqlite3
@@ -37,10 +38,20 @@ rf_model = RandomForestClassifier(random_state=5)
 # Fit The Model
 rf_model = rf_model.fit(X_train_scaled, y_train)
 
-def math(m):
-   X_test_scaled = X_scaler.transform(m)
-   s = X_test_scaled.reshape(1,-1)
-   predictions_rf = rf_model.predict(s)
+# Function that gets the single input from user
+# and use the above model to make a churn prediction
+def manual_input(user):
+   test = X_scaler.transform(user)
+   X_test_scaled = test.reshape(1,-1)
+   predictions_rf = rf_model.predict(X_test_scaled)
    return predictions_rf 
+
+# Function that gets upload file
+# and use the above model to make a churn predictions
+def csv_input(file):
+   X_test_scaled = X_scaler.transform(file)
+   predictions_rf = rf_model.predict(X_test_scaled)
+   return predictions_rf 
+
 
     

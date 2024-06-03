@@ -1,9 +1,13 @@
+# Import necessary libraries
 import dash
-from dash import dcc, html, callback
+from dash import Dash, dcc, html, dash_table, Input, Output, State, callback
 import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output, State
 import pandas as pd
-from data_processing import math
+import base64
+import datetime
+import io
+# Import 2 functions that run the Random Forest model
+from data_processing import manual_input,csv_input
 
 # Define the variable inputs for the model
 age = dcc.Input(id='input_box1', type='number')
@@ -17,7 +21,7 @@ usage = dcc.Input(id='input_box5', type='number')
 last_interaction = dcc.Input(id='input_box6', type='number')
 support = dcc.Input(id='input_box7', type='number')
 
-# describe the model
+# Describe the model
 about_random_forest = """
 Random Forest is an ensemble learning method used for classification and regression tasks. 
 It operates by constructing a multitude of decision trees during training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the individual trees. 
@@ -32,7 +36,7 @@ Input single-user data in the fields below for a case-by-case analysis, or uploa
 below for multi-user analysis. 
             """
 
-# define the layout
+# Define the layout
 layout = dbc.Container([
     dbc.Row([
         dbc.Col([
@@ -154,15 +158,38 @@ layout = dbc.Container([
         dbc.Col([]),
         dbc.Col([])
     ]),
-    # dbc.Row([
-    #     dbc.Col([
-    #         html.H3("Try it!")
-    #     ]),
-    #     dbc.Col([]),
-    #     dbc.Col([]),
-    #     dbc.Col([])
-    # ])
+    dbc.Row([
+        dbc.Col([
+            html.Div([
+    dcc.Upload(
+        id='upload-data',
+        children=html.Div([
+            'Drag and Drop or ',
+            html.A('Select Files')
+        ]),
+        style={
+            'width': '100%',
+            'height': '60px',
+            'lineHeight': '60px',
+            'borderWidth': '1px',
+            'borderStyle': 'dashed',
+            'borderRadius': '5px',
+            'textAlign': 'center',
+            'margin': '10px'
+        },
+        # Allow multiple files to be uploaded
+        multiple=True
+    ),  
+    dcc.Store(id='stored-data', storage_type='session'),
+    dcc.Store(id='stored-data2', storage_type='session'),
+    html.Div(id='output-data-upload'),
+    html.Div(id='result-output'),
+    dbc.Button("Download CSV", id="btn_csv", color="primary"),
+    dcc.Download(id="download-dataframe-csv")
 
+            ])
+        ])
+    ])    
 ])
 
 # Define callback to update output based on inputs
@@ -184,6 +211,7 @@ layout = dbc.Container([
     ]
  )
 
+# Function that gets the single input from user and transform categorical data to 0 and 1  
 def update_output(n_clicks, input1, dropdown_value1, input2, dropdown_value2, dropdown_value3, input3, input4, input5, input6, input7 ):
     if n_clicks is None:
         raise dash.exceptions.PreventUpdate
@@ -242,20 +270,113 @@ def update_output(n_clicks, input1, dropdown_value1, input2, dropdown_value2, dr
     return data
     
 
-
 # Callback to create DataFrame from stored data and display it
 @callback(
     Output('output_div', 'children'),
     Input('store-data', 'data')
 )
+
+# Function that creates a data frame with customer's input and call manual_input from data_processing
+# to run the Random Forest Model. 
 def display_data(data):
    
     df = pd.DataFrame(data)
     df = df.astype(float)
-    prediction = math(df)
+    prediction = manual_input(df)
     df['churn'] = prediction
+    df = df[['churn','age','female','male','tenure','basic_subscription',
+            'standard_subscription','premium_subscription','monthly_contract',
+            'quarterly_contract','annual_contract','total_spend','payment_delay',
+            'usage_frequency','last_interaction','support_calls']]
     # Convert DataFrame to HTML table
-    return dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)  
+    table = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+    return html.Div(table, style = {'overflowX': 'auto', 'maxHeight': '500px', 'overflowY': 'auto'})  
 
+# Function to parse uploaded file contents and convert to DataFrame
+def parse_contents(contents, filename):
+    content_type, content_string = contents.split(',')
+
+    decoded = base64.b64decode(content_string)
+    try:
+        if 'csv' in filename:
+            # Assume that the user uploaded a CSV file
+            df = pd.read_csv(
+                io.StringIO(decoded.decode('utf-8')))
+        elif 'xls' in filename:
+            # Assume that the user uploaded an excel file
+            df = pd.read_excel(io.BytesIO(decoded))
+        return df    
+    except Exception as e:
+        print(e)
+        return None
+        
+# Callback to handle file upload and process contents
+@callback(Output('output-data-upload', 'children'),
+              Output('stored-data', 'data'), 
+              Input('upload-data', 'contents'),
+              State('upload-data', 'filename')
+              )
+# Function to handle file upload and process contents
+def update_output(list_of_contents, list_of_names):
+    if list_of_contents is not None:
+        for contents, name in zip(list_of_contents, list_of_names):
+            df = parse_contents(contents, name)
+            if df is not None:
+                return f"File {name} successfully uploaded.", df.to_dict('records')
+        return "There was an error processing the file.", None
+    return "No file uploaded yet.", None
+
+# Callback to process uploaded data and create a DataFrame
+@callback(
+    Output('result-output', 'children'),
+    Output('stored-data2', 'data'), 
+    Input('stored-data', 'data')
+)
+# Function that creates a data frame with uploaded data,transform categorical data to 0 and 1
+# and call csv_input from data_processing to run the Random Forest Model. 
+def display_data_csv(stored_data):
+    if stored_data is not None: 
+        df = pd.DataFrame(stored_data)  
+        df = pd.get_dummies(df,prefix='',prefix_sep='', columns=['gender','subscription','contract']).astype(int)
+        df = df.rename(columns={
+        'basic': 'basic_subscription', 'premium': 'premium_subscription', 'standard': 'standard_subscription',
+        'annual': 'annual_contract', 'monthly': 'monthly_contract', 'quarterly': 'quarterly_contract'
+        })
+        df = df[['age','female','male','tenure','basic_subscription',
+                 'standard_subscription','premium_subscription','monthly_contract',
+                 'quarterly_contract','annual_contract','total_spend','payment_delay',
+                 'usage_frequency','last_interaction','support_calls']]
+        df = df.astype(float)
+        prediction = csv_input(df)
+        df['churn'] = prediction
+        df = df[['churn','age','female','male','tenure','basic_subscription',
+            'standard_subscription','premium_subscription','monthly_contract',
+            'quarterly_contract','annual_contract','total_spend','payment_delay',
+            'usage_frequency','last_interaction','support_calls']]
+    # Convert DataFrame to HTML table
+        table = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
+        return html.Div(table, style = {'overflowX': 'auto', 'maxHeight': '500px', 'overflowY': 'auto'}),df.to_dict('records') 
+    return None
+
+# Callback to handle CSV download
+@callback(
+    Output("download-dataframe-csv", "data"),
+    Input("btn_csv", "n_clicks"),
+    State('stored-data', 'data'),
+    State('stored-data2', 'data'),
+    prevent_initial_call=True
+)
+# Function that merge the original upload file data with the churn column created above
+
+def download_csv(n_clicks,stored_data,stored_data2):
+    if stored_data is None:
+        return None
+    if stored_data2 is None:
+        return None
+    df = pd.DataFrame(stored_data)
+    df2 = pd.DataFrame(stored_data2)
+    df['churn'] =  df2['churn']
+    # Convert DataFrame to csv file for the user to download
+    return dcc.send_data_frame(df.to_csv, "mydf.csv")
 
 dash.register_page(__name__)
