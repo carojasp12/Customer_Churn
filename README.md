@@ -1,6 +1,7 @@
 # To Churn or Not to Churn
 
-<img width="718" alt="Screenshot 2024-06-02 at 6 41 53 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/a8a80760-d6d5-4f18-93b1-96563c7d23be">
+![churn-image](https://github.com/carojasp12/Customer_Churn/assets/152045367/8244fdd7-dbb9-4cf0-9fb8-15ced6c32d6f)
+
 
 ## Introduction 
 In today's competitive business environment, understanding why customers churn is essential for maintaining a loyal customer base. Leveraging advanced machine learning tools, we have identified the top three main reasons behind customer churn, as well as the three least significant factors. By using these sophisticated analytical tools, businesses can predict customer behavior more accurately, allowing for the development of targeted strategies to enhance customer retention and reduce churn.
