@@ -44,7 +44,7 @@ The dataset we used for our model contains the follow features:
 * Usage Frequency: the number of times the customer has use the company's servies in the last month
 * Last Interaction: the number of days since the customer last had contact with any aspect of the company
 
-# Dashboard
+#### Dashboard
 <img width="500" alt="Screenshot 2024-06-02 at 6 52 31 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/0d39026c-128e-47fe-aedb-cc64a00ff052">
 
 On this page, we present an interactive dashboard designed to assist business owners in utilizing our machine learning model to predict whether a customer is likely to churn or remain loyal. This tool provides valuable insights by visualizing customer data through various interactive charts and graphs. By leveraging these predictive analytics, businesses can make informed decisions to improve customer retention strategies and address potential issues proactively.
