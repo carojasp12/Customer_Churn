@@ -23,13 +23,12 @@ Under the folder resources, you will find the datasets we used and the database 
 
 ### Home
 
-Welcome to our homepage! Here, we delve into the concept of churn and its implications for businesses. Utilizing Dash, a Python web framework for building analytical web applications, and Bootstrap, a popular CSS framework for responsive design, we've crafted an informative and visually engaging interface.
+Welcome to our homepage! Here, we delve into the concept of churn and its implications for businesses. Utilizing Dash, a Python web framework for building analytical web applications, and Dash Bootstrap, the Dash wrapper for a popular CSS framework for responsive design, we've crafted an informative and visually engaging interface.
 
 ### About
 Get to know the talented individuals driving this project forward.
 
 ### Data
-
 Our model uses the Customer Churn Dataset found on Kaggle, modified from two datasets (one testing, one training) to create a single dataset. Refer to the resources folder. 
 
 The dataset we used for our model contains the follow features:
@@ -44,6 +43,9 @@ The dataset we used for our model contains the follow features:
 * Usage Frequency: the number of times the customer has use the company's servies in the last month
 * Last Interaction: the number of days since the customer last had contact with any aspect of the company
 
+### The Model
+On this page, we leverage our trained model to provide predictions for supplied data using input fields created with plotly dash core components and dash bootstrap components.
+
 ### Dashboard
 <img width="500" alt="Screenshot 2024-06-02 at 6 52 31 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/0d39026c-128e-47fe-aedb-cc64a00ff052">
 
@@ -57,7 +59,7 @@ On this page, we present an interactive dashboard designed to assist business ow
 
 ### Algorithm Testing Results
 
-![investigation_results](https://github.com/carojasp12/Customer_Churn/assets/152045367/0ddeb6be-b1e9-4a11-b0c0-0fa4cd7ca8ae)
+![investigation_results](https://github.com/carojasp12/Customer_Churn/assets/152045367/b8dca9a8-09bc-4dcb-a223-a35505e1acfa)
 
 The above chart represents the highest accuracy scores achieved by each model following tuning. As you can see, the Random Forest Classifier achieved the highest accuracy.
 
