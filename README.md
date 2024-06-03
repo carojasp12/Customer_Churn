@@ -69,6 +69,12 @@ The above chart represents the highest accuracy scores achieved by each model fo
 
 The above Feature Importance chart identifies Support Calls, Total Spend, and Payment Delay as the features that contribute most to determining whether a customer will churn. Our machine learning model, with its impressive accuracy rate of 93%, can use data including these features to help identify at-risk customers. By leveraging this model, business owners can proactively address potential issues, implement targeted retention strategies, and ultimately reduce customer churn. This high level of predictive accuracy allows for more informed decision-making, helping businesses maintain a stable and loyal customer base.
 
+### Model Results
+
+![model](https://github.com/carojasp12/Customer_Churn/assets/152045367/7950ca9c-b026-4ca9-9efb-bfd7ffc48b17)
+
+The above image shows the results our model run on data provided by the user.
+
 <img width="472" alt="Screenshot 2024-06-02 at 6 54 19 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/03ece066-465a-47bd-b72c-1137da064d9d">
 
 
