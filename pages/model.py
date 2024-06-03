@@ -356,7 +356,7 @@ def display_data_csv(stored_data):
     # Convert DataFrame to HTML table
         table = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
         return html.Div(table, style = {'overflowX': 'auto', 'maxHeight': '500px', 'overflowY': 'auto'}),df.to_dict('records') 
-    return None
+    return "No data available.", None
 
 # Callback to handle CSV download
 @callback(
