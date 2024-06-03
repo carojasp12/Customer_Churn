@@ -51,11 +51,20 @@ On this page, we present an interactive dashboard designed to assist business ow
 
 ## Results
 
-![Screenshot 2024-06-02 at 6 28 58 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/17ff8d60-5818-45aa-8952-135f5f9f8d4f)
-lts
-![Screenshot 2024-06-02 at 6 33 51 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/a1cfa409-a502-448d-8869-e65a38597e6a)
+#### Complete Dataset Correlation Matrix
 
-While having one of the top three reasons for churning does not necessarily mean that a customer will leave, the probability increases significantly if a customer exhibits all three reasons. Our machine learning model, with its impressive accuracy rate of 93%, can help identify these at-risk customers. By leveraging this model, business owners can proactively address potential issues, implement targeted retention strategies, and ultimately reduce customer churn. This high level of predictive accuracy allows for more informed decision-making, helping businesses maintain a stable and loyal customer base.
+![complete_dataset_correlation_matrix](https://github.com/carojasp12/Customer_Churn/assets/152045367/aa9a3a04-d0e0-45e2-be72-fcaa6c35a171)
+
+#### Algorithm Testing Results
+
+![investigation_results](https://github.com/carojasp12/Customer_Churn/assets/152045367/0ddeb6be-b1e9-4a11-b0c0-0fa4cd7ca8ae)
+
+The above chart represents the highest accuracy scores achieved by each model following tuning. As you can see, the Random Forest Classifier achieved the highest accuracy.
+
+#### Random Forest Feature Importances
+![Screenshot 2024-06-02 at 6 28 58 PM](https://github.com/carojasp12/Customer_Churn/assets/152929248/17ff8d60-5818-45aa-8952-135f5f9f8d4f)
+
+The above Feature Importance chart identifies Support Calls, Total Spend, and Payment Delay as the features that contribute most to determining whether a customer will churn. Our machine learning model, with its impressive accuracy rate of 93%, can use data including these features to help identify at-risk customers. By leveraging this model, business owners can proactively address potential issues, implement targeted retention strategies, and ultimately reduce customer churn. This high level of predictive accuracy allows for more informed decision-making, helping businesses maintain a stable and loyal customer base.
 
 <img width="472" alt="Screenshot 2024-06-02 at 6 54 19 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/03ece066-465a-47bd-b72c-1137da064d9d">
 
