@@ -73,7 +73,7 @@ The above Feature Importance chart identifies Support Calls, Total Spend, and Pa
 
 ![model](https://github.com/carojasp12/Customer_Churn/assets/152045367/7950ca9c-b026-4ca9-9efb-bfd7ffc48b17)
 
-The above image shows the results our model run on data provided by the user.
+The above image shows our model, displaying the results for data input via download and by manual input into the app. 
 
 <img width="472" alt="Screenshot 2024-06-02 at 6 54 19 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/03ece066-465a-47bd-b72c-1137da064d9d">
 
