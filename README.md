@@ -1,14 +1,14 @@
-# Why do customer Churn or not Churn? 
+# To Churn or Not to Churn
 
 <img width="718" alt="Screenshot 2024-06-02 at 6 41 53 PM" src="https://github.com/carojasp12/Customer_Churn/assets/152929248/a8a80760-d6d5-4f18-93b1-96563c7d23be">
 
 ## Introduction 
 In today's competitive business environment, understanding why customers churn is essential for maintaining a loyal customer base. Leveraging advanced machine learning tools, we have identified the top three main reasons behind customer churn, as well as the three least significant factors. By using these sophisticated analytical tools, businesses can predict customer behavior more accurately, allowing for the development of targeted strategies to enhance customer retention and reduce churn.
 
-### Churning
+#### Churning
 Churning refers to the phenomenon where customers or employees stop using a product or service, or leave a company. This is often seen as a negative metric, indicating dissatisfaction or better opportunities elsewhere. Churning is particularly significant in subscription-based businesses, where customer retention is crucial for revenue stability.
 
-### Non-Churning
+#### Non-Churning
 Non-churning refers to customers or employees who remain loyal to a company or continue to use its products or services over time. Non-churning is indicative of satisfaction, value perception, and strong relationships.
 
 ## Tools 
